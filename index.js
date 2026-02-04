@@ -15,7 +15,7 @@ const app = express();
 
 // Middlewares
 app.use(cors({
-  origin: 'https://techstore-react-one.vercel.app/',
+  origin: 'https://techstore-react-green.vercel.app/',
   credentials: true
 }));
 app.use(express.json());
