@@ -1,13 +1,10 @@
-const express = require('express');
+const express = require("express");
+const Product = require("../models/Product");
 const router = express.Router();
-const {
-    getProductos,
-    getProductoById,
-    crearProducto
-} = require('../controller/productosController');
 
-router.get('/', getProductos);
-router.get('/:id', getProductoById);
-router.post('/', crearProducto);
+router.get("/", async (req, res) => {
+  const products = await Product.find();
+  res.json(products);
+});
 
 module.exports = router;
