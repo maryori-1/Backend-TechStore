@@ -15,7 +15,10 @@ const app = express();
 
 // Middlewares
 app.use(cors({
-  origin: 'https://techstore-react-green.vercel.app/',
+  origin: [
+    'http://localhost:5173',
+    'https://techstore-react-one.vercel.app'
+  ],
   credentials: true
 }));
 app.use(express.json());
